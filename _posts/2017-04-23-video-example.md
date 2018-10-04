@@ -1,7 +1,34 @@
 ---
 layout: post
-title: Video example
+title: phpyun-代码审计
 ---
+Phpyun开源人才招聘系统存在代码写入执行漏洞
+影响版本：phpyun 4.5 beta及最新版phpyun 4.6 beta
+漏洞出现在install.php文件中，代码241~345位置。当执行安装程序运行至step==’data’时，代码位置为241行开始如图1，对数据直接进行了POST,即用户输入，而漏洞的造成常出现在输入输出位置（GET、POST）动作获取数据时未对用户提交数据进行过滤与处理。从而导致注入（不局限于SQL注入）漏洞的发生。知道这一漏洞原理后，继续往下看回到代码处，图1中安装至step=”data”这一步时，需用户填写邮箱(manager_email)、数据库名（dbname）等信息并将POST的内容交给$manager、dbname等变量。
 
-<iframe src="https://player.vimeo.com/video/214092083?badge=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/214092083">A Sense of Wonder</a> from <a href="https://vimeo.com/mathieulelay">Mathieu Le Lay</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                            图1
+继续往下看，在代码283行，获取用户自定义的表前缀并通过POST赋给$tablepre，至284行开始创建表，从默认的sql获取内容，并将默认的表前缀phpyun_替换为用户自定义的表前缀，往下开始创建表，这其中对用户的提交内容并未经过任何的过滤处理函数也并未过滤单引号，从而可知已经可对创建的表名进行注入。
+
+                           图2
+代码运行至331行附近，由图3可知根据安装提交的配置数据对配置文件进行写入。很容易的发现在写入的内容中存在dbname、tablepre未过滤的数据可控变量，并且未过滤单引号，从而此处造成了代码注入执行漏洞。
+
+                            图3
+对以上进行复现，下载最新版本phpyun 4.6 beta在本地搭建好环境，用户通过单引号构造dbname=php’,phpinfo(),//可直接注入代码并写入到配置文件，在安装执行到step=data时抓包构造如下图4：
+
+                               图4
+构造好payload放行后，查看配置文件成功写入注入的phpinfo().如图5
+
+                            图5
+在本地搭建的环境中访问成功执行。此漏洞同时存在phpyun 4.5 beta与最新版v4.6 beta中。
+
+                                   图6-v4.5
+
+                             图7-phpyun v4.6
+
+
+XSS
+
+
+
+
+
