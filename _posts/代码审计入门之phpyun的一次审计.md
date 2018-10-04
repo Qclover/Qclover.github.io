@@ -21,29 +21,29 @@ title: 代码审计入门之phpyun的一次审计
 
 代码运行至331行附近，由图3可知根据安装提交的配置数据对配置文件进行写入。很容易的发现在写入的内容中存在dbname、tablepre未过滤的数据可控变量，并且未过滤单引号，从而此处造成了代码注入执行漏洞。
 
-![img](..\screenshots\wpsA8.tmp.jpg) 
+![img](https://github.com/Qclover/Qclover.github.io/blob/master/screenshots/wpsA8.tmp.jpg) 
 
 ​                            图3
 
 对以上进行复现，下载最新版本phpyun 4.6 beta在本地搭建好环境，用户通过单引号构造dbname=php’,phpinfo(),//可直接注入代码并写入到配置文件，在安装执行到step=data时抓包构造如下图4：
 
-![img](..\screenshots\wpsA9.tmp.jpg) 
+![img](https://github.com/Qclover/Qclover.github.io/blob/master/screenshots/wpsA9.tmp.jpg) 
 
 ​                               图4
 
 构造好payload放行后，查看配置文件成功写入注入的phpinfo().如图5
 
-![img](..\screenshots\wpsAA.tmp.jpg) 
+![img](https://github.com/Qclover/Qclover.github.io/blob/master/screenshots/wpsAA.tmp.jpg) 
 
 ​                            图5
 
 在本地搭建的环境中访问成功执行。此漏洞同时存在phpyun 4.5 beta与最新版v4.6 beta中。
 
-![img](..\screenshots\wpsAB.tmp.jpg) 
+![img](https://github.com/Qclover/Qclover.github.io/blob/master/screenshots/wpsAB.tmp.jpg) 
 
 ​                                   图6-v4.5
 
-![img](..\screenshots\wpsAC.tmp.jpg) 
+![img](https://github.com/Qclover/Qclover.github.io/blob/master/screenshots/wpsAC.tmp.jpg) 
 
 ​                             图7-phpyun v4.6
 
@@ -53,12 +53,12 @@ title: 代码审计入门之phpyun的一次审计
 
 XSS
 
-![img](..\\screenshots\wpsAD.tmp.jpg) 
+![img](https://github.com/Qclover/Qclover.github.io/blob/master/screenshots/wpsAD.tmp.jpg) 
 
-![img](..\screenshots\wpsBD.tmp.jpg) 
+![img](https://github.com/Qclover/Qclover.github.io/blob/master/screenshots/wpsBD.tmp.jpg) 
 
-![img](..\screenshots\wpsBE.tmp.jpg) 
+![img](https://github.com/Qclover/Qclover.github.io/blob/master/screenshots/wpsBE.tmp.jpg) 
 
-![img](..\\screenshots\wpsBF.tmp.jpg) 
+![img](https://github.com/Qclover/Qclover.github.io/blob/master/screenshots/wpsBF.tmp.jpg) 
 
-![img](..\screenshots\wpsC0.tmp.jpg) 
+![img](https://github.com/Qclover/Qclover.github.io/blob/master/screenshots/wpsC0.tmp.jpg) 
