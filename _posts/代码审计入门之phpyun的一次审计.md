@@ -53,12 +53,12 @@ title: 代码审计入门之phpyun的一次审计
 
 XSS
 
-![img](..\screenshots\wpsAD.tmp.jpg) 
+![img](..\\screenshots\wpsAD.tmp.jpg) 
 
 ![img](..\screenshots\wpsBD.tmp.jpg) 
 
 ![img](..\screenshots\wpsBE.tmp.jpg) 
 
-![img](..\screenshots\wpsBF.tmp.jpg) 
+![img](..\\screenshots\wpsBF.tmp.jpg) 
 
 ![img](..\screenshots\wpsC0.tmp.jpg) 
