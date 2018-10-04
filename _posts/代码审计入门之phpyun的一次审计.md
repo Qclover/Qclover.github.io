@@ -1,6 +1,9 @@
+---
+layout: post
+title: 代码审计入门之phpyun的一次审计 
+---
 
-
-#####             Phpyun开源人才招聘系统存在代码写入执行漏洞
+#####     Phpyun开源人才招聘系统存在代码写入执行漏洞
 
 ​                  影响版本：phpyun 4.5 beta及最新版phpyun 4.6 beta
 
