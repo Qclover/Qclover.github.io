@@ -15,7 +15,7 @@ title: 代码审计入门之phpyun的一次审计
 
 继续往下看，在代码283行，获取用户自定义的表前缀并通过POST赋给$tablepre，至284行开始创建表，从默认的sql获取内容，并将默认的表前缀phpyun_替换为用户自定义的表前缀，往下开始创建表，这其中对用户的提交内容并未经过任何的过滤处理函数也并未过滤单引号，从而可知已经可对创建的表名进行注入。
 
-![img](..\screenshots\wps97.tmp.jpg) 
+![img](https://github.com/Qclover/Qclover.github.io/screenshots/wps97.tmp.jpg) 
 
 ​                           图2
 
