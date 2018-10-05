@@ -1,13 +1,9 @@
 title: Qclover's Blog
-#author: Qclover
-description: about sec skill pages.
-author:                                     #自定义常亮
+author: Zenghuaqing
+description: about sec skill pages.                                   
 name: Zenghuaqing
-email: 1826741794@qq.com
-link:                        
-locals:                                     #自定义常量
+email: 1826741794@qq.com                                    
 tags: 标签
-about: 关于
 active: 技术 
 highlighter: null
 permalink: /:title
@@ -17,4 +13,4 @@ baseurl:
 
 # Custom options:
 # color_scheme: azul|ruby|amber|avocado
- color_scheme: avocado
+#color_scheme: avocado
