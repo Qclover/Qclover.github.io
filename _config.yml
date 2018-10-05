@@ -1,10 +1,10 @@
 # Jekyll configuration
 
 name: Qclover
-description: Welcome to Xixia！
+description: Welcome to Qclover.Guangnian！
 
 # url is currently only used only for the RSS feed in feed.xml
-url: https://github.com/zxixia/jekyll-xixia
+url: https://github.com/Qclover
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
 # be the project name.
