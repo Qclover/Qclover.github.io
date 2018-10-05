@@ -1,4 +1,4 @@
-Jekyll Xixia
+Guang.Nian
 ============
 
 * Get it from [github](https://github.com/zxixia/jekyll-xixia).
