@@ -7,7 +7,7 @@ author: Qclover
 description: The read me page of jekyll-xixia.
 ---
 
-##### Phpyun开源人才招聘系统存在代码写入执行漏洞
+##### <center>Phpyun开源人才招聘系统存在代码写入执行漏洞</center>
 
 <center>影响版本：phpyun 4.5 beta及最新版phpyun 4.6 beta</center>
 
