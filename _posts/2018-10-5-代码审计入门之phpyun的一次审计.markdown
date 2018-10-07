@@ -4,7 +4,7 @@ title:  代码审计入门之phpyun的一次审计
 categories: 代码审计
 tags: phpyun
 author: Qclover
-description: The read me page of jekyll-xixia.
+description: The read me page of clover.
 ---
 
 ##### <center>Phpyun开源人才招聘系统存在代码写入执行漏洞</center>
