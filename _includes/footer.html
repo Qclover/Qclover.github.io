@@ -1,22 +1,12 @@
-{% assign trans = site.data.values[site.lan] %}
-<div class="footer">
-    <p>&copy;{{ site.time | date: '%Y' }} {{ site.name }}{{ trans.thanks }}
-            {% for thank in site.data.thanks %}
-                <a href="{{ thank.url }}">
-                {{ thank.title }}
-                </a>
-                <!-- not the last, output a ',' -->
-                {% if forloop.last == false %}
-                ,
-                {% endif %}
-            {% endfor %}
-    </p>
-</div>
-
-<!-- 
-    {% include disqus-counts.html %}
-    {% include analytics.html %} 
--->
-
-</body>
-</html>
+<footer id="bottom">
+  <br>
+  <span>{{ site.title }} ©
+  {% assign current = "now" | date: "%Y" | plus: 0%}
+  {% unless site.footer.since and site.footer.since == current %}
+    {{ site.footer.since }}
+    -
+  {% endunless %}
+  {{ current }}
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>

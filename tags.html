@@ -1,23 +1,32 @@
 ---
 layout: default
+title: 标签
+page-title: tags
+home-title: Let's pick something.
+description:
 ---
 
-<div class="well article">
-{% assign sortedtags = site.tags | sort %}
-{% for tag in sortedtags %}
-    <h2>{{ tag[0] | capitalize }}</h2>
-    <ul>
-        {% assign pages_list = tag[1] %}
-        {% for node in pages_list %}
-            {% if node.title != null %}
-            {% if group == null or group == node.group %}
-                <li><span class="post-date">
-                    {% assign date_format = site.date_format.tag %}
-                    {{ node.date | date: date_format }} </span></span><a href="{{ site.baseurl}}{{ node.url }}"> {{ node.title }}</a></li>
-            {% endif %}
-            {% endif %}
-        {% endfor %}
-        {% assign pages_list = nil %}
+{% include header.html %}
+{% include boot.html %}
+<main>
+    {% include title.html %}
+    <ul class="ex-list">
+        <li class="fadeInUp animated">
+        {% if site.tags.size>0 %}
+            {% for tag in site.tags %}
+            <a href="#{{ tag[0] }}" class="tag">{{ tag[0]}}</a>
+            {% endfor %}
+        {% endif %}
+        </li>
+        {% for tag in site.tags %}
+        <li>
+            <span class="tag-name" id="{{ tag[0] }}">「{{ tag[0] }}」</span>
+            {% for post in tag[1] %}
+            <a class="tag-post" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            {% endfor %}
+        </li>
+
+        {% endfor%}
     </ul>
-{% endfor %}    
-</div>
+</main>
+{% include footer.html %}
