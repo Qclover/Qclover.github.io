@@ -19,7 +19,7 @@ NickName: 'Qclover'
 webtitle: 'Qclover.Guangnian'
 bio: 'Lion'
 about: true
-aboutyou: 'your introduction'
+aboutyou: '白帽子一名，涉足于web安全，代码审计，网络安全，python编程，游荡于SRC.O(∩_∩)O哈哈！大佬勿喷，正向各位大牛学习中'
 portraits: '/assets/profile.jpeg' # your portraits image file path
 
 # SNS
@@ -59,7 +59,8 @@ pygmentsTheme: 'default'
 
 # 友情链接
 friends:
-  jekyll: 'https://www.jekyll.com.cn/'
+  freebuf: 'http://www.freebuf.com'
+  i春秋:'https://www.ichunqiu.com/'
 
 # 评论 最佳体验 在disqus、livere和Gitment之间三选一
 # disqus 评论
