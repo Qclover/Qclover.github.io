@@ -4,7 +4,6 @@ title:  EmpireCMS_V7.5的一次审计
 date:   2018-10-11 00:05:21 +0800
 tags: 代码审计
 cover: '../assets/test.png'
-subtitle:'EmpireCMS_V7.5的一次审计'
 ---
 
 ### <center>EmpireCMS_V7.5的一次审计</center>
