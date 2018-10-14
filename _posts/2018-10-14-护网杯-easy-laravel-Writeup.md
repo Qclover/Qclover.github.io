@@ -9,11 +9,9 @@ cover: '../assets/test1.png'
 
 ##  护网杯-easy laravel-Writeup
 
-​                                   <center> Category: [PHP](http://www.venenof.com/index.php/category/PHP/), [CTF](http://www.venenof.com/index.php/category/CTF/), [Web](http://www.venenof.com/index.php/category/Web/)</center>
+​                                      Category: [PHP](http://www.venenof.com/index.php/category/PHP/), [CTF](http://www.venenof.com/index.php/category/CTF/), [Web](http://www.venenof.com/index.php/category/Web/)​
 
-​                                    <center> 转载venenof</center>
-
-​                                      文章来自原venenof-[Web](http://www.venenof.com/index.php/category/Web/)
+​                                      文章来源于原venenof-[Web](http://www.venenof.com/index.php/category/Web/)，转载venenof
 
 护网杯碰到一个`Laravel`的代码审计题目，刚好最近在用`LA`写平台，于是就很感兴趣，题目整体不难，对`Laravel`框架熟悉就可以做，但整个利用链构造的比较巧妙，感谢出题人@4uuu Nya出了这么一个有意思的题目。
 
