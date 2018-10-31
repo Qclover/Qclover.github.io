@@ -1,17 +1,16 @@
 ---
 layout: post
-title:  代码审计入门之phpyun的一次审计
+title:  phpyun漏洞披露
 categories: 代码审计
-tags: phpyun
+tags: PHP
 color: rgb(255,90,90)
 author: Qclover
-description: The read me page of clover.
 ---
 
 ##### <center>phpyun漏洞披露</center>
 
 <center>影响版本：phpyun 4.5 beta及最新版phpyun 4.6 beta</center>
-
+#####配置文件写入
 ​       漏洞出现在install.php文件中，代码241~345位置。当执行安装程序运行至step==’data’时，代码位置为241行开始如图1，对数据直接进行了POST,即用户输入，而漏洞的造成常出现在输入输出位置（GET、POST）动作获取数据时未对用户提交数据进行过滤与处理。从而导致注入（不局限于SQL注入）漏洞的发生。知道这一漏洞原理后，继续往下看回到代码处，图1中安装至step=”data”这一步时，需用户填写邮箱(manager_email)、数据库名（dbname）等信息并将POST的内容交给$manager、dbname等变量。
 
 ![img]({{site.baseurl}}/assets/images/pic1.jpg) 
@@ -52,7 +51,43 @@ description: The read me page of clover.
 
 ​                             图7-phpyun v4.6
 
+#####PHPYUN 代码执行漏洞披露
+
+漏洞出现在数据备份时，未对表名做严格过滤，导致任意代码写入执行。
+
+代码位置：漏洞发生在 database.class.php文件backup_action备份函数。通过回溯分析整个执行流程如下：
+
+首先将POST过来的表名直接交给了数组变量$DBParameter中的tablename。然后往下继续执行BackupDatabaseInit($DBParameter)函数，跟进函数
+
+![img1]({{site.baseurl}}/assets/images/images/phpyun-01.png)
+
+跟进此函数在代码103行附件可以看到将获取的$tablename直接赋给了$d_table变量。通过分析此过程并未经过任何过滤函数然后将$d_table连同其他信息一起交给了$string并将此写入了$mypath/config.php文件里。如下图所示：
+
+![img2]({{site.baseurl}}/assets/images/images/phpyun-02.png)
+
  
+
+以下是$mypath备份路径的参数传递过程，通过分析可以知道备份路径为bdata路径下写入的文件目录为bdata下的目录名为phpyun_2018+当前时间的目录写入数据的文件为config.php。
+
+ 
+
+![img3]({{site.baseurl}}/assets/images/images/phpyun-03.png)
+
+![img]({{site.baseurl}}/assets/images/images/phpyun-04.png)
+
+ 
+
+![img4-mypath]({{site.baseurl}}/assets/images/images/phpyun-05.png)
+
+复现：
+
+登入后台进行数据备份抓包重放构造payload:xxxx];phpinfo();//成功写入了文件且导致代码执行发生
+
+![img6]({{site.baseurl}}/assets/images/images/phpyun-06.png)
+
+![img7]({{site.baseurl}}/assets/images/images/phpyun-07.png)
+
+![img8]({{site.baseurl}}/assets/images/images/phpyun-08.png)
 
  
 
