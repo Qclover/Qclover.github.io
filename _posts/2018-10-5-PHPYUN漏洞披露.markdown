@@ -62,11 +62,11 @@ author: Qclover
 
 首先将POST过来的表名直接交给了数组变量$DBParameter中的tablename。然后往下继续执行BackupDatabaseInit($DBParameter)函数，跟进函数
 
-![img]({{site.baseurl}}/assets/images\phpyun-01.png) 
+![img]({{site.baseurl}}/assets/images/phpyun-01.png) 
 
 跟进此函数在代码103行附件可以看到将获取的$tablename直接赋给了$d_table变量。通过分析此过程并未经过任何过滤函数然后将$d_table连同其他信息一起交给了$string并将此写入了$mypath/config.php文件里。如下图所示：
 
-![img]({{site.baseurl}}/assets/images\phpyun-02.png) 
+![img]({{site.baseurl}}/assets/images/phpyun-02.png) 
 
  
 
@@ -74,23 +74,23 @@ author: Qclover
 
  
 
-![img]({{site.baseurl}}/assets/images\phpyun-03.png) 
+![img]({{site.baseurl}}/assets/images/phpyun-03.png) 
 
-![img]({{site.baseurl}}/assets/images\phpyun-04.png) 
+![img]({{site.baseurl}}/assets/images/phpyun-04.png) 
 
  
 
-![img]({{site.baseurl}}/assets/images\phpyun-05.png) 
+![img]({{site.baseurl}}/assets/images/phpyun-05.png) 
 
 复现：
 
 登入后台进行数据备份抓包重放构造payload:xxxx];phpinfo();//成功写入了文件且导致代码执行发生
 
-![img]({{site.baseurl}}/assets/images\phpyun-06.png) 
+![img]({{site.baseurl}}/assets/images/phpyun-06.png) 
 
-![img]({{site.baseurl}}/assets/images\phpyun-07.png) 
+![img]({{site.baseurl}}/assets/images/phpyun-07.png) 
 
-![img]({{site.baseurl}}/assets/images\phpyun-08.png) 
+![img]({{site.baseurl}}/assets/images/phpyun-08.png) 
 
 XSS
 
