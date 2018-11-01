@@ -51,7 +51,10 @@ author: Qclover
 ![img]({{site.baseurl}}/assets/images/wpsAC.tmp.jpg) 
 
 ​                             图7-phpyun v4.6
-#####PHPYUN 代码执行漏洞披露
+
+
+
+#### **PHPYUN** **代码执行漏洞披露**
 
 漏洞出现在数据备份时，未对表名做严格过滤，导致任意代码写入执行。
 
@@ -59,30 +62,35 @@ author: Qclover
 
 首先将POST过来的表名直接交给了数组变量$DBParameter中的tablename。然后往下继续执行BackupDatabaseInit($DBParameter)函数，跟进函数
 
-
-![img1]({{site.baseurl}}/assets/images/images/phpyun-01.png)
+![img]({{site.baseurl}}/assets/images\phpyun-01.png) 
 
 跟进此函数在代码103行附件可以看到将获取的$tablename直接赋给了$d_table变量。通过分析此过程并未经过任何过滤函数然后将$d_table连同其他信息一起交给了$string并将此写入了$mypath/config.php文件里。如下图所示：
 
-![img2]({{site.baseurl}}/assets/images/images/phpyun-02.png)
+![img]({{site.baseurl}}/assets/images\phpyun-02.png) 
+
+ 
 
 以下是$mypath备份路径的参数传递过程，通过分析可以知道备份路径为bdata路径下写入的文件目录为bdata下的目录名为phpyun_2018+当前时间的目录写入数据的文件为config.php。
 
-![img3]({{site.baseurl}}/assets/images/images/phpyun-03.png)
-![img]({{site.baseurl}}/assets/images/images/phpyun-04.png)
-![img4-mypath]({{site.baseurl}}/assets/images/images/phpyun-05.png)
+ 
+
+![img]({{site.baseurl}}/assets/images\phpyun-03.png) 
+
+![img]({{site.baseurl}}/assets/images\phpyun-04.png) 
+
+ 
+
+![img]({{site.baseurl}}/assets/images\phpyun-05.png) 
 
 复现：
 
 登入后台进行数据备份抓包重放构造payload:xxxx];phpinfo();//成功写入了文件且导致代码执行发生
 
-![img6]({{site.baseurl}}/assets/images/images/phpyun-06.png)
+![img]({{site.baseurl}}/assets/images\phpyun-06.png) 
 
-![img7]({{site.baseurl}}/assets/images/images/phpyun-07.png)
+![img]({{site.baseurl}}/assets/images\phpyun-07.png) 
 
-![img8]({{site.baseurl}}/assets/images/images/phpyun-08.png)
-
- 
+![img]({{site.baseurl}}/assets/images\phpyun-08.png) 
 
 XSS
 
