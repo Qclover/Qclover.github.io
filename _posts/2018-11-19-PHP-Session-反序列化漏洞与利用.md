@@ -11,9 +11,7 @@ cover: '../assets/test5.png'
 
 ## 1.安恒429|web 3 session反序列化-Alictf web 400 Recruitment
 
-上传模块可以从外部URL获取内容
-
-这样它可以使用curl或file_get_contents函数，如果没有检查URL，那么它会变成SSRF vuln
+上传模块可以从外部URL获取内容这样它可以使用curl或file_get_contents函数，如果没有检查URL，那么它会变成SSRF vuln
 
 对于URL，它只能以.jpg结尾
 
