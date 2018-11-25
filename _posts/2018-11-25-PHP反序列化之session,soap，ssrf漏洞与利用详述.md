@@ -13,7 +13,7 @@ cover: '../assets/test5.png'
 
 
 
-##PHP session 序列化及反序列化处理器设置使用不当带来的安全问题
+## PHP session 序列化及反序列化处理器设置使用不当带来的安全问题
 
 ### PHP Session 序列化及反序列化处理器简述
 
