@@ -9,6 +9,8 @@ cover: '../assets/oauth.png'
 
 ## img标签之xss利用从放弃到OAuth授权劫持
 
+**文章首发于i春秋：**https://bbs.ichunqiu.com/thread-48657-1-1.html
+
 ### 一、前奏
 
 惊喜跌落无奈

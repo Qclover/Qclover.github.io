@@ -9,6 +9,8 @@ cover: '../assets/test5.png'
 
 # PHP反序列化之session,soap，ssrf漏洞与利用详述
 
+**文章首发于i春秋：**https://bbs.ichunqiu.com/thread-48210-1-1.html
+
 [TOC]
 
 
