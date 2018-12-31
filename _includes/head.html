@@ -45,7 +45,12 @@
             this.node.style.top=parseInt(this.node.style.top)+this.yspeed+'px';//垂直方向运动
             this.node.style.left=parseInt(this.node.style.left)+this.xsin*Math.sin(this.xspeed)+'px';
             this.node.style.fontSize=this.size+'px';
+
            this.node.style.color='rgb('255','255','255')';
+
+
+           this.node.style.color='rgb('+Math.ceil(Math.random()*255)+','+Math.ceil(Math.random()*255)+','+Math.ceil(Math.random()*255)+')';
+
         };
     }
 //    创建雪花
