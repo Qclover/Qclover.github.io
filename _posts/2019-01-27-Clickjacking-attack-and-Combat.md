@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Clickjacking attack and Combat
-noToc: true
+noToc: false
 date:   2019-01-27 22:30:00 +0800
 tags: WEB安全 clickjack
 cover: '../assets/clickjack.png' 
@@ -208,7 +208,7 @@ X-Frame-Options指令
 
 `x-frame-options`头有三种不同的指令，可以在其中选择。这些必须作为HTTP标头发送，因为如果在META标记中找到，浏览器将忽略。同样重要的是要注意某些指令仅在某些浏览器中受支持。请参阅本文后面的浏览器支持。虽然不需要在整个站点上发送此响应标头，但最佳做法是至少在需要它的页面上启用它。 
 
-1.DENY指令 
+**1.DENY指令** 
 
 无论网站尝试什么，DENY指令都会完全禁用框架中页面的加载。下面是如果启用此标头请求将会是什么样子。
 
@@ -223,7 +223,7 @@ x-frame-options: DENY
 - Facebook的
 - GitHub上
 
-2.SAMEORIGIN指令 
+**2.SAMEORIGIN指令** 
 
 SAMEORIGIN指令允许将页面加载到与页面本身相同的原始帧中。
 
@@ -242,7 +242,7 @@ x-frame-options: SAMEORIGIN
 - 易趣
 - LinkedIn
 
-3.允许来自uri指令 
+**3.允许来自uri指令** 
 
 ALLOW-FROM *uri*指令允许页面仅加载到指定原点和/或域的框架中。下面是如果启用此标头请求将会是什么样子。
 
