@@ -3,7 +3,7 @@ layout: post
 title:  Clickjacking attack and Combat
 noToc: true
 date:   2019-01-27 22:30:00 +0800
-tags: WEB安全 XSS
+tags: WEB安全 clickjack
 cover: '../assets/clickjack.png' 
 ---
 
