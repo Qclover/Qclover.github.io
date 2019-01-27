@@ -77,7 +77,7 @@ Gitment: true
 Gitment_owner: 'Qclover'  # github用户名
 Gitment_repo: 'Qclover.github.io'  # github博客存放的仓库名
 client_id: '83c68c2064d2eb5c0c0b'  # 注册 OAuth Application 后获得的 client_id
-client_secret: '5d2f481654d9b7566037148a4123f0aa09036238'  # 注册 OAuth Application 后获得的 client_secret
+client_secret: '261818aeb7f42cb54955f1b4b759edfea6f05eef'  # 注册 OAuth Application 后获得的 client_secret
 
 # Share : weibo, qq, wechat, tencent, douban, qzone, linkedin, diandian, facebook, twitter, google
 social-share: true
