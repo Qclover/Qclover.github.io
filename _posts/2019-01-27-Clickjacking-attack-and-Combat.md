@@ -166,9 +166,11 @@ PS：可以把iframe透明设为0.3看下实际点到的东西。
 
 **Note:SOP（同源策略）仅在两个帧具有相同原点时才允许拖放行为，即（http://victim.com）** 
 
-<iframe width="560" height="315" src="https://youtu.be/MMntLY_ddgs">
+<iframe height=498 width=510 src='https://youtu.be/MMntLY_ddgs' frameborder=0 'allowfullscreen'></iframe>
 
 *服务器上的malicious.html* 
+
+
 
 - 现在我们可以看到，我们能够泄漏/窃取敏感的东西，比如（API、CSRF令牌等从API）**~严重性：高**
 
