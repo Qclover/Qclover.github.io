@@ -1110,3 +1110,10 @@ a{
 #media{
   display: none;
 }
+
+#dsq-app6579 iframe{    width: 1px !important;
+    margin-left: 10%;
+    min-width: 80% !important;
+    border: none !important;
+    overflow: hidden !important;
+    height: 288px !important;}
