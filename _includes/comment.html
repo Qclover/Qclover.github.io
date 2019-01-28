@@ -70,3 +70,32 @@ var gitment = new Gitment({
 gitment.render('container')
 </script>
 {% endif %}
+
+{% if site.Gitalk %}
+<section class="post-footer-item comment">
+  <div id="container"></div>
+</section>
+<!--Gitalk评论start  -->
+
+<!-- 引入Gitalk评论插件  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<!-- 引入一个生产md5的js，用于对id值进行处理，防止其过长 -->
+<!-- Thank DF:https://github.com/NSDingFan/NSDingFan.github.io/issues/3#issuecomment-407496538 -->
+<script src="https://Qclover.github.io/js/md5.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: 'd069388bb64b4fa55132',
+        clientSecret: '5cba3f374cd4b239757adc1f3c01836f3870373a',
+        repo: 'Qclover.github.io',
+        owner: 'Qclover',
+        admin: ['Qclover'],
+        distractionFreeMode: true,
+    id: md5(location.pathname),
+    });
+    gitalk.render('gitalk-container');
+</script>
+
+<!-- Gitalk end -->
+{% endif %}

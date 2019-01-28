@@ -73,11 +73,15 @@ disqus_url: 'https://abc.disqus.com/embed.js' # https://abc.disqus.com/embed.js
 livere: false
 livere_uid: 'MTAyMC8zNDI2OS8xMDgwNg==' # MTAyMC8zNDI2OS8xMDgwNg==
 # Gitment评论 OAuth Application
-Gitment: true
-Gitment_owner: 'Qclover'  # github用户名
-Gitment_repo: 'Qclover.github.io'  # github博客存放的仓库名
-client_id: '83c68c2064d2eb5c0c0b'  # 注册 OAuth Application 后获得的 client_id
-client_secret: '261818aeb7f42cb54955f1b4b759edfea6f05eef'  # 注册 OAuth Application 后获得的 client_secret
+gitalk:
+  enable: true
+  clientID: d069388bb64b4fa55132
+  clientSecret: 5cba3f374cd4b239757adc1f3c01836f3870373a
+  repo: Qclover.github.io 
+  owner: Qclover
+  admin: Qclover
+  distractionFreeMode:true
+
 
 # Share : weibo, qq, wechat, tencent, douban, qzone, linkedin, diandian, facebook, twitter, google
 social-share: true
