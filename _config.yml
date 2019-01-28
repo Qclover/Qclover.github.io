@@ -73,7 +73,7 @@ disqus_url: 'https://abc.disqus.com/embed.js' # https://abc.disqus.com/embed.js
 livere: false
 livere_uid: 'MTAyMC8zNDI2OS8xMDgwNg==' # MTAyMC8zNDI2OS8xMDgwNg==
 # Gitment评论 OAuth Application
-duoshuo_shortname: 'Qclover'
+duoshuo: 'Qclover'
 
 
 # Share : weibo, qq, wechat, tencent, douban, qzone, linkedin, diandian, facebook, twitter, google
