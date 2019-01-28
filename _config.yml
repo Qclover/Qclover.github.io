@@ -80,7 +80,7 @@ gitalk:
   repo: Qclover.github.io 
   owner: Qclover
   admin: Qclover
-  distractionFreeMode:true
+  distractionFreeMode: true
 
 
 # Share : weibo, qq, wechat, tencent, douban, qzone, linkedin, diandian, facebook, twitter, google
