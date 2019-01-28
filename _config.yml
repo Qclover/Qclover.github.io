@@ -73,14 +73,7 @@ disqus_url: 'https://abc.disqus.com/embed.js' # https://abc.disqus.com/embed.js
 livere: false
 livere_uid: 'MTAyMC8zNDI2OS8xMDgwNg==' # MTAyMC8zNDI2OS8xMDgwNg==
 # Gitment评论 OAuth Application
-gitalk:
-  enable: true
-  clientID: 'd069388bb64b4fa55132'
-  clientSecret: '5cba3f374cd4b239757adc1f3c01836f3870373a'
-  repo: 'Qclover.github.io'
-  owner: 'Qclover'
-  admin: 'Qclover'
-  distractionFreeMode: true
+duoshuo_shortname: Qclover
 
 
 # Share : weibo, qq, wechat, tencent, douban, qzone, linkedin, diandian, facebook, twitter, google
