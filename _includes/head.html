@@ -10,7 +10,25 @@
 <link rel="stylesheet" href="/assets/css/pygments/pygments_{{ site.pygmentsTheme }}.css">
 <link rel="stylesheet" href="/assets/css/github-markdown.css">
  <!--   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-    <script src="/assets/js/jquery.tocLight.js"></script>
+<script  src = "/js/jquery.toc.js" > </script >
+    <style type="text/css">
+    #renderIn {
+      margin-left: 3em;
+    }
+    </style>
+
+    <script type="text/javascript">
+    $(function() {
+      $('#main').toc({
+        showAlways:true,
+        renderIn:'#renderIn',
+        contentsText:"Legenda",
+        hideText:'Collapse',
+        showText:'Expand',
+        showCollapsed:true
+      });
+    });
+    </script >
 
     <script type="text/javascript">
         $(function() {
