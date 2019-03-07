@@ -6,25 +6,7 @@
 {% include head.html %}
 {% include androidColor.html %}
  <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/toc.css">
-<script  src = "/js/jquery.toc.js" > </script >
-    <style type="text/css">
-    #renderIn {
-      margin-left: 3em;
-    }
-    </style>
 
-    <script type="text/javascript">
-    $(function() {
-      $('#main').toc({
-        showAlways:true,
-        renderIn:'#renderIn',
-        contentsText:"Legenda",
-        hideText:'Collapse',
-        showText:'Expand',
-        showCollapsed:true
-      });
-    });
-    </script >
 </head>
 <!--<body>-->
 <body id="small">
@@ -51,8 +33,8 @@
   {% endif %}
 
   <!-- 文章内容 -->
-  {{ content | toc_generate }}
-
+  {{ toc_generate }}
+  {{ content }}
   <!-- 引入share模块 -->
   {% include share.html %}
 </div>
