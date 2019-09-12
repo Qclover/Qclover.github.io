@@ -33,6 +33,8 @@ https://bbs.huaweicloud.com/forum/thread-20762-2-1.html
 ![img2]({{site.baseurl}}/assets/images/CSRF/7.png)
 
 *其中[BypassX-Request-With-POC](https://github.com/Qclover/CSRF/blob/master/BypassX-Request-With)为上图测试中用到的POC*
+*某SRC*
+![img2]({{site.baseurl}}/assets/images/CSRF/7.png)
 
 于是，进入沉思，找到原因才能找到解决办法。又仔细查看浏览器的数据包，最后找到了这个
 
