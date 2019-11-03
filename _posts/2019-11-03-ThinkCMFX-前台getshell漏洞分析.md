@@ -4,7 +4,7 @@ title: ThinkCMFX 前台getshell漏洞分析
 noToc: true
 date: 2019-11-03 23:30:00 +0800
 tags:  代码审计 PHP
-cover: '../assets/' 
+cover: '../assets/espcms.png' 
 ---
 
 ## ThinkCMFX 前台getshell漏洞分析
