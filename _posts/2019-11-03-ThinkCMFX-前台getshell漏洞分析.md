@@ -83,7 +83,7 @@ F7跟进调用了thinkphp的controller类,然后最终调用think核心的view
 
 ![1572792323719]({{site.baseurl}}/assets/images/thinkcmf/img/1572792323719.png)
 
-
+同样是thinkphp3框架为什么tp3却不可在前台执行fetch方法呢？通过比较thinkphp3和thinkcmfx调用的fetch可以发现其问题的根源，在thinkphp3中fetch是protected,而在thinkcmfx中可以发现fetch存在于HomebaseController类中的public直接可在前台调用，这就导致了存在漏洞的方法入口能够被我们控制，正好与官方给出的修复呼应上了。
 
 ### 2.前台任意文件上传
 
