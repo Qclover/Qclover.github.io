@@ -13,7 +13,7 @@ cover: '../assets/'
 
 ![image-20200322123529153]({{site.baseurl}}/assets/images/app-burp/1.png)
 
-![image-20200322123607256](C:\Users\clover\AppData\Roaming\Typora\typora-user-images\image-20200322123607256.png)
+![image-20200322123607256]({{site.baseurl}}/assets/images/app-burp/6.png)
 
 等等。
 
